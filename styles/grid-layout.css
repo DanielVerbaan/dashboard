@@ -1,0 +1,364 @@
+.box1 {grid-area: header;}
+.box2 {grid-area: infovoertuig;}
+	.box2a {grid-area: brandstof;}
+	.box2b {grid-area: snelheid;}
+	.box2c {grid-area: acceleratie;}
+	.box2d {grid-area: gforce;}
+.box3 {grid-area: omgevvoertuig;}
+	.box3a {grid-area: zwaartekracht1;}
+	.box3b {grid-area: reis;}
+	.box3c {grid-area: atmosfeer1;}
+	.box3d {grid-area: nabijeomgev;}
+.box4 {grid-area: mars;}
+	.box4a {grid-area: atmosfeer2;}
+	.box4b {grid-area: temperatuur;}
+	.box4c {grid-area: zwaartekracht2;}
+	.box4d {grid-area: druk;}
+.box5 {grid-area: voorraden;}
+	.box5a {grid-area: eten;}
+	.box5b {grid-area: drinken;}
+	.box5c {grid-area: zuurstof;}
+
+/*
+ * Grid layout voor mobiel (xs)
+ */
+@media only screen and (max-width: 600px) {
+	html{
+		padding: 0 10px;
+	}
+	
+	.grid-container{
+		display: grid;
+		grid-template-areas:
+			'header header header'
+			'infovoertuig infovoertuig infovoertuig'
+			'omgevvoertuig omgevvoertuig omgevvoertuig'
+			'mars mars mars'
+			'voorraden voorraden voorraden';
+		
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 50px auto;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	
+	.box2{
+		display: grid;
+		grid-template-areas:
+			'brandstof brandstof snelheid snelheid'
+			'brandstof brandstof snelheid snelheid'
+			'acceleratie acceleratie gforce gforce'
+			'acceleratie acceleratie gforce gforce';
+		
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+		column-gap: 10px;
+		row-gap: 10px;
+			
+			
+	}
+	
+	.box3{
+		display: grid;
+		grid-template-areas:
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'reis reis reis reis'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+		column-gap: 10px;
+		row-gap: 10px;
+			
+	}
+	
+	.box4{
+		display: grid;
+		grid-template-areas:
+			'atmosfeer2 atmosfeer2 temperatuur temperatuur'
+			'atmosfeer2 atmosfeer2 temperatuur temperatuur'
+			'zwaartekracht2 zwaartekracht2 druk druk'
+			'zwaartekracht2 zwaartekracht2 druk druk';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+		column-gap: 10px;
+		row-gap: 10px;
+			
+	}
+	
+	.box5{
+		display: grid;
+		grid-template-areas:
+			'eten eten drinken drinken'
+			'eten eten drinken drinken'
+			'zuurstof zuurstof zuurstof zuurstof';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 75px 75px 100px;
+		
+		column-gap: 10px;
+		row-gap: 10px;
+			
+	}
+}
+
+/*
+ * Grid layout voor tablet (sm)
+ */
+@media only screen and (min-width: 601px) and (max-width: 960px){
+	html{
+		padding: 0 20px;
+	}
+	
+	.grid-container{
+		display: grid;
+		grid-template-areas:
+			'header header header'
+			'infovoertuig infovoertuig infovoertuig'
+			'omgevvoertuig omgevvoertuig omgevvoertuig'
+			'mars mars mars'
+			'voorraden voorraden voorraden';
+		
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+		column-gap: 30px;
+		row-gap: 30px;
+	}
+	
+	.box2{
+		display: grid;
+		grid-template-areas:
+			'brandstof brandstof snelheid snelheid'
+			'brandstof brandstof snelheid snelheid'
+			'acceleratie acceleratie gforce gforce'
+			'acceleratie acceleratie gforce gforce';
+		
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 125px 125px 125px 125px;
+		
+		column-gap: 20px;
+		row-gap: 20px;		
+	}
+	
+	.box3{
+		display: grid;
+		grid-template-areas:
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'reis reis reis reis'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 125px 125px 125px 125px 125px;
+		
+		column-gap: 20px;
+		row-gap: 20px;		
+	}
+	
+	.box4{
+		display: grid;
+		grid-template-areas:
+			'atmosfeer2 atmosfeer2 temperatuur temperatuur'
+			'atmosfeer2 atmosfeer2 temperatuur temperatuur'
+			'zwaartekracht2 zwaartekracht2 druk druk'
+			'zwaartekracht2 zwaartekracht2 druk druk';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 125px 125px 125px 125px;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+			
+	}
+	
+	.box5{
+		display: grid;
+		grid-template-areas:
+			'eten eten drinken drinken'
+			'eten eten drinken drinken'
+			'zuurstof zuurstof zuurstof zuurstof';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 125px 125px 150px;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+			
+	}
+}
+
+/*
+ * Grid layout voor laptop (md)
+ */
+@media only screen and (min-width: 961px) and (max-width: 1280px) {
+	html{
+		padding: 0 30px;
+	}
+	
+	.grid-container{
+		display: grid;
+		grid-template-areas:
+			'header header header'
+			'infovoertuig omgevvoertuig omgevvoertuig'
+			'infovoertuig omgevvoertuig omgevvoertuig'
+			'voorraden voorraden mars'
+			'voorraden voorraden mars';
+		
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+		column-gap: 30px;
+		row-gap: 30px;
+	}
+	
+	.box2{
+		display: grid;
+		grid-template-areas:
+			'brandstof'
+			'snelheid'
+			'acceleratie'
+			'gforce';
+		
+		grid-template-columns: 1fr ;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		
+		column-gap: 20px;
+		row-gap: 20px;		
+	}
+	
+	.box3{
+		display: grid;
+		grid-template-areas:
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'reis reis reis reis'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 100px 100px 100px 100px 100px;
+		
+		column-gap: 20px;
+		row-gap: 20px;		
+	}
+	
+	.box4{
+		display: grid;
+		grid-template-areas:
+			'atmosfeer2  temperatuur '
+			'zwaartekracht2  druk';
+			
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 100px;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+			
+	}
+	
+	.box5{
+		display: grid;
+		grid-template-areas:
+			'eten drinken zuurstof';
+			
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+			
+	}
+}
+
+/*
+ * Grid layout voor desktop (lg)
+ */
+@media only screen and (min-width: 1281px) {
+	html{
+		padding: 0 30px;
+	}
+	
+	.grid-container{
+		display: grid;
+		grid-template-areas:
+			'header header header'
+			'infovoertuig omgevvoertuig omgevvoertuig'
+			'infovoertuig omgevvoertuig omgevvoertuig'
+			'voorraden voorraden mars'
+			'voorraden voorraden mars';
+		
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+		column-gap: 40px;
+		row-gap: 40px;
+	}
+	
+	.box2{
+		display: grid;
+		grid-template-areas:
+			'brandstof snelheid'
+			'acceleratie gforce';
+		
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		
+		column-gap: 20px;
+		row-gap: 20px;		
+	}
+	
+	.box3{
+		display: grid;
+		grid-template-areas:
+			'zwaartekracht1 zwaartekracht1 atmosfeer1 atmosfeer1'
+			'reis reis reis reis'
+			'nabijeomgev nabijeomgev nabijeomgev nabijeomgev';
+			
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 150px 100px 200px;
+		
+		column-gap: 20px;
+		row-gap: 20px;		
+	}
+	
+	.box4{
+		display: grid;
+		grid-template-areas:
+			'atmosfeer2  temperatuur '
+			'zwaartekracht2  druk';
+			
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 150px 150px;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+			
+	}
+	
+	.box5{
+		display: grid;
+		grid-template-areas:
+			'eten drinken zuurstof';
+			
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		
+		column-gap: 20px;
+		row-gap: 20px;
+			
+	}
+}
+
+
+
+	

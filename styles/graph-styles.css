@@ -1,0 +1,113 @@
+/*
+ * Style voor gauge onder brandstof
+ */
+
+
+/*
+ * Style voor progressbar onder reis
+ */
+
+.progress2 {
+	padding: 3px;
+	border-radius: 30px;
+	background: #fff;  
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar2 {
+	height: 20px;
+	border-radius: 30px;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+	transition: 0.1s ease-out;  
+	transition-property: width, background-color;    
+}
+
+.progress-moved .progress-bar2 {
+	width: 70%; 
+	background-color: #005288;  
+	animation: progressAnimation s ease-out;
+}
+
+@keyframes progressAnimation {
+	0% { width: 5%; background-color: #a7a9ac;}
+	100% { width: 70%; background-color: #005288; }
+}
+
+
+/*
+ *	Einde style voor progressbar onder reis
+ */
+ 
+ /*
+  * Style voor bar graph onder Atmosfeer op Mars
+  */
+  .bar{
+  height: 30px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  line-height: 30px;
+  font-size: 16px;
+  color: white;
+  padding: 0 0 0 10px;
+  position: relative;
+}
+.bar::before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 0;
+  z-index: -2;
+  background: #ecf0f1;
+}
+.bar::after{
+  content: '';
+  background: #2ecc71;
+  height: 30px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  -webkit-animation: bar-before 1 1.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+  
+@-webkit-keyframes bar-before{
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.bar1::after{
+  max-width: 95%;
+}
+
+.bar2::after{
+  max-width: 3%;
+}
+
+.bar3::after{
+  max-width: 1%;
+}
+
+.bar4::after{
+  max-width: 1%;
+}
+
+.bar5::after{
+  max-width: 1%;
+}
+
+  
+
+ /*
+  * Einde style voor bar graph onder Atmosfeer op Mars
+  */
+  
+  

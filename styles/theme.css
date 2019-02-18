@@ -1,0 +1,84 @@
+/*
+ * Load custom fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+ 
+*{
+	font-family: Montserrat, sans-serif;
+}
+
+.spaceX-logo img{
+	width: 75%;
+	display: block;
+	margin: 0 auto;
+}
+
+.info-container>div{
+	border-radius: 10px;
+	box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
+}
+
+.info-container div h3{
+	margin: 0;
+	color: #005288;
+}
+
+.graph-cont{
+	margin-top: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+	.speed-number p{
+		margin: 0;
+		text-align: center;
+		font-size: 180%;
+	}
+	
+	.speed-kilometer p{
+		margin-top: 5px;
+		margin-bottom: 0px;
+		text-align: center;
+		font-size: 140%;
+	}
+	
+	.info-container>div{
+		padding: 10px;
+	}
+	
+	.info-container div h3{
+		font-size: 80%;	
+	}
+	
+	.reis-progress{
+		margin-top: 7px;
+	}
+	
+	.progress2{
+		width: 84%;
+		float: center;
+		display: inline-block;
+	}
+	
+	.reis-icon1{
+		width: 5%;
+		height: auto;
+		padding-right: 2%;
+		float: left;
+		display: inline-block;
+	}
+	
+	.reis-icon2{
+		width: 5%;
+		height: auto;
+		padding-left: 2%;
+		float: right;
+		display: inline-block;
+	}
+	
+	.reis-icon1 img, .reis-icon2 img{
+		max-height: 100%;
+		max-width: 100%;
+	}
+	
+	
+}
